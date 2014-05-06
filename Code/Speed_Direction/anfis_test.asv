@@ -1,0 +1,8 @@
+fis_mod = anfis(trnDataInColumns);
+fisOutTrn_anfis = evalfis(trnDataInput,fis_mod);
+fisOutTest_anfis = evalfis(testDataInput,fis_mod);
+f_anfis = length(testDataOutput);
+fisOutTest_anfis = sqrt(out1.*out1+out2.*out2);
+fis_mod = anfis(trnDataInColumns_speed);
+fisOutTrn_anfis = evalfis(trnDataInput,fis_mod);
+mse_anfis = sqrt(sum((testDataOutput_speed-fisOutTest_anfis).^2)/f_anfis);

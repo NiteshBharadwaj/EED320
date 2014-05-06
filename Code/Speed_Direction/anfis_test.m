@@ -1,0 +1,9 @@
+fis_mod = anfis(trnDataInColumns);
+fisOutTrn_anfis = evalfis(trnDataInput,fis_mod);
+fisOutTest_anfis = evalfis(testDataInput,fis_mod);
+f_anfis = length(testDataOutput);
+g = length(trnDataInput);
+onesa = ones(g);
+regCoef = regress(trnDataOutput,[onesa(:,1) trnDataInput]);
+onesb = ones(f_anfis);
+regOut = [onesb(:,1) testDataInput]*regCoef;

@@ -1,0 +1,35 @@
+filename_speed = 'E:\EED320\Code and Data\Data\Speed\Chennai\output';
+constr_speed;
+noinp =3;  % Number of autoregressions of wind
+memf = 3;   % Number of classes of wind       
+dat = 49;   % To be changed
+lim = 47;     % To be changed
+r = 0;
+constr_direction;
+anfis_test;
+filename_direction = 'E:\EED320\Code and Data\Data\Direction\Chennai\output';
+memf = 17;   % Number of classes of wind       
+dat = 65;   % To be changed
+lim = 47;     % To be changed
+r = 0;
+constr;
+trial;
+%train;
+gensys;
+res;
+litres;  
+
+           
+
+
+    
+
+        
+
+
+            
+
+
+    
+
+        
